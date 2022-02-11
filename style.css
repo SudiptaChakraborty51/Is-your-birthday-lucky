@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 :root {
-    --dark-cyan: #12586de5;
-    --light-cyan: #ddf9fc;
+    --dark-blue: #1e40af;
+    --light-blue: #dbeafe;
 }
 
 body {
@@ -11,32 +11,80 @@ body {
 
 h1 {
     text-align: center;
-    color: var(--dark-cyan);
+    color: var(--dark-blue);
     padding: 1rem;
 }
 
 .container {
     width: 50%;
     margin: auto;
+    text-align: center;
 }
 
 input,
 label {
     display: block;
+    padding: 1rem;
 }
 
 input {
     width: 100%;
-    background-color: var(--light-cyan);
+    font-size: large;
+    padding: 0.5rem;
+    border: 2px solid var(--dark-blue);
+    border-radius: 0.5rem;
+    background-color: var(--light-blue);
 
 }
 
 label {
     font-size: large;
     font-weight: bold;
-    color: var(--dark-cyan);
+    color: var(--dark-blue);
+}
+
+button {
+    font-size: large;
+    font-weight: bold;
+    display: block;
+    margin: 2rem auto;
+    padding: 0.5rem;
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+    border-radius: 0.5rem;
 }
 
 .error {
     color: red;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    padding-bottom: 2rem;
 }
+
+.output {
+    color: var(--dark-blue);
+    font-family: cursive;
+    padding-bottom: 2rem;
+}
+
+footer {
+    background-color: var(--light-blue);
+    text-align: center;
+    padding: 1rem 0rem 0rem 1rem;
+}
+
+.portfolio {
+    text-decoration: none;
+    color: var(--dark-blue)
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 1rem;
+}
+
+
+
+
