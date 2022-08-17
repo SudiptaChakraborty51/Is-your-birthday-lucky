@@ -67,6 +67,7 @@ button {
     color: var(--dark-blue);
     font-family: cursive;
     padding-bottom: 2rem;
+    font-size: large;
 }
 
 footer {
