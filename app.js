@@ -7,6 +7,7 @@ const emotionGif = document.querySelector('.emotion');
 
 checkButton.addEventListener('click', function checkDOBLucky() {
     outputMessage.innerText = "Loading...";
+    emotionGif.style.display="none";
     if (dateOfBirth.value != "" && luckyNumber.value != "") {
         errorMessage.style.display = "none";
         outputMessage.style.display = "block";
@@ -19,11 +20,13 @@ checkButton.addEventListener('click', function checkDOBLucky() {
         if (sumOfDigits % luckyNumber.value == 0) {
             setTimeout(() => {
                 outputMessage.innerText = "Your Birthday is LUCKY :)";
+                emotionGif.style.display="block";
                 emotionGif.innerHTML="<img src='/images/happy-gif.gif'>";
             },2000);
         } else {
             setTimeout(() => {
                 outputMessage.innerText = "Your Birthday is NOT LUCKY :(";
+                emotionGif.style.display="block";
                 emotionGif.innerHTML="<img src='/images/sad-gif.gif'>";
             },2000);
         }
