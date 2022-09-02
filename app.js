@@ -5,20 +5,20 @@ const errorMessage = document.querySelector('.error');
 const outputMessage = document.querySelector('.output');
 const emotionGif = document.querySelector('.emotion');
 
-// function replaceChar(a,b) {
-//     const dob=dateOfBirth.value;
-//     const result="";
-//     for(let i=0; i<dob.length; i++){
-//         const ch=dob.charAt(i);
-//         if(ch===a){
-//             result+=b;
-//         } else {
-//             result+=ch;
-//         }
-//     }
-//     return result;
-// }
-// console.log(replaceChar("-",""));
+function replaceChar(a,b) {
+    const dob=dateOfBirth.value;
+    let result="";
+    for(let i=0; i<dob.length; i++){
+        const ch=dob.charAt(i);
+        if(ch===a){
+            result+=b;
+        } else {
+            result+=ch;
+        }
+    }
+    return result;
+}
+console.log(replaceChar("-",""));
 
 checkButton.addEventListener('click', function checkDOBLucky() {
     outputMessage.innerText = "Loading...";
@@ -26,19 +26,10 @@ checkButton.addEventListener('click', function checkDOBLucky() {
     if (dateOfBirth.value != "" && luckyNumber.value != "") {
         errorMessage.style.display = "none";
         outputMessage.style.display = "block";
-        var dob = dateOfBirth.value;
-        // const result="";
-        // for(let i=0; i<dob.length; i++){
-        //     if(dob.charAt(i)==="-"){
-        //         result+="";
-        //     } else {
-        //         result+=dob.charAt(i);
-        //     }
-        // }
-        dob=dob.replaceAll("-","");
+        let Dob=replaceChar("-","");
         let sumOfDigits = 0;
-        for (let i = 0; i < dob.length; i++) {
-            sumOfDigits = sumOfDigits + Number(dob.charAt(i));
+        for (let i = 0; i < Dob.length; i++) {
+            sumOfDigits = sumOfDigits + Number(Dob.charAt(i));
         }
         if (sumOfDigits % luckyNumber.value == 0) {
             setTimeout(() => {
