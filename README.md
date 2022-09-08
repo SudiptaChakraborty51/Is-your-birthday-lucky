@@ -10,7 +10,7 @@
 - Create this as a website, put a privacy notice. Say that you're not storing data. 
 - Use the footer to redirect to your social media accounts and your portfolio. 
 
-## Stack
+## Tech-Stack
 
 - HTML5
 - CSS3
